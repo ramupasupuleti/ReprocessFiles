@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Scope(value="prototype")
 public class ReprocessFileForm {
 	
-	private String selectedFileType;
+	private int selectedFileType;
 	
 	private String inputParams;
 	
@@ -22,11 +22,11 @@ public class ReprocessFileForm {
 		this.inputParams = inputParams;
 	}
 
-	public String getSelectedFileType() {
+	public int getSelectedFileType() {
 		return selectedFileType;
 	}
 
-	public void setSelectedFileType(String selectedFileType) {
+	public void setSelectedFileType(int selectedFileType) {
 		this.selectedFileType = selectedFileType;
 	}
 
@@ -40,7 +40,12 @@ public class ReprocessFileForm {
 		this.fileTypes = fileTypes;
 	}
 
-	
+	@Override
+	public String toString() {
+		return "ReprocessFileForm [selectedFileType=" + selectedFileType + ", inputParams=" + inputParams
+				+ ", fileTypes=" + fileTypes + "]";
+	}
+
 	
 	
 	
